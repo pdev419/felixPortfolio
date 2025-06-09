@@ -52,7 +52,7 @@ export function Skills() {
     return () => observer.disconnect();
   }, []);
 
-  const categories = [...new Set(skills.map(skill => skill.category))];
+  const categories = Array.from(new Set(skills.map(skill => skill.category)));
 
   return (
     <div className="py-20 px-6">
